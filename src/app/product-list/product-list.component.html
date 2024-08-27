@@ -1,0 +1,103 @@
+<div class="container">
+
+    <div *ngFor="let name of names; index as i; first as isFirst">
+        <li> {{name}} </li>
+    </div> 
+<div>{{ProductNames}}</div>
+
+    <h1>Our Products</h1>
+    <div class="filter_area">
+        <i class="bx bx-filter"></i>
+    </div>
+    <section class="product-grid">
+        <div class="product-card" *ngFor="let product of products">
+            <div class="img-placeholder">
+                <img [src]="product.image_url" alt="Product 1">
+            </div>
+            <div class="product-info">
+                <p class="product-name"> {{product.name}}</p>
+                <h6 class="product-price">{{product.price}}</h6>
+                <div class="product-actions">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+                </div>
+            </div>
+        </div>
+
+       
+        
+        <!-- <div class="product-card">
+            <div class="img-placeholder">
+                <img src="/regal.jpeg" alt="Product 2">
+            </div>
+            <div class="product-info">
+                <p class="product-name">Zuri bag</p>
+                <h6 class="product-price">$999</h6>
+                <div class="product-actions">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="img-placeholder">
+                <img src="/regal.jpeg" alt="Product 3">
+            </div>
+            <div class="product-info">
+                <p class="product-name">bloom bag</p>
+                <h6 class="product-price">$1499</h6>
+                <div class="product-actions">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="img-placeholder">
+                <img src="/IMG_8747.JPG" alt="Product 4">
+            </div>
+            <div class="product-info">
+                <p class="product-name">adele bag</p>
+                <h6 class="product-price">$799</h6>
+                <div class="product-actions">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="img-placeholder">
+                <img src="/IMG_5628.JPG" alt="Product 5">
+            </div>
+            <div class="product-info">
+                <p class="product-name"> Zara bag</p>
+                <h6 class="product-price">$1099</h6>
+                <div class="product-actions">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="favorite-icon"><i class="bx bx-heart"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="img-placeholder">
+                <img src="/IMG_8747.JPG" alt="Product 6">
+            </div>
+            <div class="product-info">
+                <p class="product-name"> Flame </p>
+                <h6 class="product-price">$899</h6>
+                <div class="product-actions">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="favorite-icon"><i class="bx bx-heart"></i>
+                    </span>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    
+</div>
+<p>Default pagination:</p>
+    <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination" />
+    
+    <hr />
+    
+    <pre>Current page: {{ page }}</pre>
